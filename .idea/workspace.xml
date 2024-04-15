@@ -4,9 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b35e09d-38e0-4cc3-bdcc-e3ecd6b66d5b" name="Changes" comment="create project">
+    <list default="true" id="4b35e09d-38e0-4cc3-bdcc-e3ecd6b66d5b" name="Changes" comment="加载模型、对其进行训练、评估其在验证集上的性能，甚至将其导出为ONNX 格式">
+      <change afterPath="$PROJECT_DIR$/export_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/predict_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rename_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tower_predict_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tower_train_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/data.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/test/test1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/train/labels/classes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/val/images/t1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/val/images/t2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/val/images/t3.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/val/labels/classes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/val/labels/t1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/val/labels/t2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultralytics/dataset/val/labels/t3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/val_batch1_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/val_batch1_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/val_batch2_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/val_batch2_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/weights/best.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/DJI_20240316112038_0020_V_航点21.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/val_batch1_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/val_batch1_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/val_batch2_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect/train2/val_batch2_pred.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +74,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "bbccoolly"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bbccoolly&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/bbccoolly/yolo8Test.git",
-    "accountId": "21e1597a-b1e4-465a-8135-ce0d7ccdc267"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/bbccoolly/yolo8Test.git&quot;,
+    &quot;accountId&quot;: &quot;21e1597a-b1e4-465a-8135-ce0d7ccdc267&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -49,19 +100,38 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Python.export_main.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.predict_main.executor": "Run",
+    "Python.rename_file.executor": "Run",
+    "Python.tower_predict_main.executor": "Run",
+    "Python.tower_train_main.executor": "Run",
+    "Python.train_main.executor": "Run",
+    "Python.yolo9_main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/workplace-python/yolo8Lcz/yolo8Lcz"
+    "last_opened_file_path": "D:/workplace-python/yolo8Lcz/yolo8Lcz",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\test" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\images\val" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\images\test" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\dataset\train\labels" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\train\labels" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\test" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\val\images" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\train\images" />
+      <recent name="D:\workplace-python\yolo8Lcz\yolo8Lcz\ultralytics\dataset\train" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.tower_train_main">
+    <configuration name="predict_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="yolo8Lcz" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,7 +144,95 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rename_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="yolo8Lcz" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rename_file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tower_predict_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="yolo8Lcz" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tower_predict_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tower_train_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="yolo8Lcz" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tower_train_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yolo9_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="yolo8Lcz" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yolo9_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.tower_train_main" />
+        <item itemvalue="Python.tower_predict_main" />
+        <item itemvalue="Python.rename_file" />
+        <item itemvalue="Python.predict_main" />
+        <item itemvalue="Python.yolo9_main" />
       </list>
     </recent_temporary>
   </component>
@@ -113,11 +275,20 @@
       <option name="project" value="LOCAL" />
       <updated>1712986392448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="加载模型、对其进行训练、评估其在验证集上的性能，甚至将其导出为ONNX 格式">
+      <option name="closed" value="true" />
+      <created>1712987546675</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987546675</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create project" />
+    <MESSAGE value="加载模型、对其进行训练、评估其在验证集上的性能，甚至将其导出为ONNX 格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="加载模型、对其进行训练、评估其在验证集上的性能，甚至将其导出为ONNX 格式" />
   </component>
 </project>
